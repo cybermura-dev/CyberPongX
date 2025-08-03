@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CyberPong X</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="styles/style.css"/>
+</head>
+<body>
+  <div id="game-container">
+    <div id="grid-overlay"></div>
+
+    <div id="hud">
+      <div class="score">PLAYER: <span id="player-score">0</span></div>
+      <div class="score">CPU: <span id="cpu-score">0</span></div>
+    </div>
+
+    <canvas id="game-canvas"></canvas>
+
+    <div class="powerup-indicator" id="powerup-indicator">
+      <div><i class="fas fa-bolt powerup-icon"></i> <span id="powerup-timer">0</span>s</div>
+    </div>
+
+    <div id="start-screen">
+      <h1>CYBERPONG X</h1>
+      <p class="instructions">
+        Welcome to <span class="highlight">CyberPong X</span> - the futuristic battle of reflexes!<br>
+        Deflect the energy orb with your cyber paddle.<br>
+        Every <span class="highlight">5th hit</span> activates <span class="highlight">POWER MODE</span> with explosive effects!<br>
+        First to <span class="highlight">11 points</span> wins the match.
+      </p>
+      <button id="start-button">INITIATE SYSTEM</button>
+      <p><small>Use mouse/touch or <span class="highlight">W/S</span> and <span class="highlight">↑/↓</span> keys</small></p>
+    </div>
+
+    <div id="game-over-screen">
+      <h1 id="game-over-title">MISSION COMPLETE</h1>
+      <div id="final-score"></div>
+      <button id="restart-button">ENGAGE NEW MATCH</button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="scripts/game.js"></script>
+</body>
+</html>
